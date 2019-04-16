@@ -1,0 +1,4 @@
+1、生命周期：onCreate()->onStart()->onResume()->onPause()->onStop()->onDestroy()。
+2、开启新的Activity,前一个activity必须先执行onPause()，新activity的onResume()才会执行。
+3、开启新的activity，前一个activity的onStop()方法不一定必须执行。（如果新activity采用的是透明主题）
+4、如果新activity非使用透明主题，返回到原activity时的执行顺序：onRestart()->onStart()->onResume()。
